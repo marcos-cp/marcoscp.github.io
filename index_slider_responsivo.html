@@ -1,0 +1,304 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>..::Ponto e Virgula::..</title>
+
+<link href="imagens/favicon.ico" type="favicon/icon" rel="shortcut icon">
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+<script type="text/javascript">
+	
+	jQuery(document).ready(function($){
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},800);
+		});
+		});
+</script>
+
+
+<style>
+
+body {font-family: Verdana,sans-serif;margin:0}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #9d2b83;
+  font-size: 15px;
+  padding: 8px 12px;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 24px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 160px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+	
+	
+</style>
+
+<link href="css/estilo_responsivo.css" rel="stylesheet" type="text/css" media="screen">
+
+</head>
+
+<body>
+	<main>
+    	<header>
+                <h1><a href="#">CCXP - Comic Con Experience</a></h1>
+                <nav id="redes">
+                    <ul>
+                        <li><a href="#" class="twitter">Twitter</a></li>
+                        <li><a href="#" class="facebook">Facebook</a></li>
+                        <li><a href="#" class="rss">RSS</a></li>
+                        <li><a href="#" class="pinterest">Pinterest</a></li>
+                        <li><a href="#" class="google">Google +</a></li>
+                        <li><a href="#" class="dribbble">Dribbble</a></li>
+                    </ul>
+                </nav>   
+        
+        <div id="menu_bg">
+        	<nav class="topnav" id="menu_principal">
+            	<ul>
+                	<li><a href="#news" class="scroll">NEWS</a></li>
+                    <li><a href="#pacotes" class="scroll">PACOTES</a></li>
+                    <li><a href="#programacao" class="scroll">PROGRAMAÇÃO</a></li>
+                    <li><a href="#parceria" class="scroll">PARCERIA</a></li>                   
+                </ul>
+            </nav>
+            <a href="javascript:void(0);" style="font-size: 15px;" class="icon" onClick="myFunction()" >&#9776;</a>
+        </div>
+        
+        <script>
+				function myFunction() {
+					var x = document.getElementById("menu_principal");
+    				if (x.className === "topnav") {
+						x.className += " responsive";
+    				} 
+					else {
+        			x.className = "topnav";
+					}
+				}
+		</script>
+        
+        
+        </header>
+        
+        <section id="home"></section>
+        
+        <div id="slider">
+        	<div id="banner">
+	        	<div class="slideshow-container">
+				  <div class="mySlides fade">
+					<div class="numbertext">1 / 3</div>
+					<img src="img1.png" style="width:100%">
+					<div class="text">O grande pai dos hérois da MARVEL</div>
+				  </div>
+
+				  <div class="mySlides fade">
+					<div class="numbertext">2 / 3</div>
+					<img src="img2.png" style="width:100%">
+					<div class="text">Conheçam os novos Jedis</div>
+				  </div>
+
+				  <div class="mySlides fade">
+					<div class="numbertext">3 / 3</div>
+					<img src="img3.png" style="width:100%">
+					<div class="text">Futuro da Marvel no Cinema</div>
+				  </div>
+
+				  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+				</div>
+				<br>
+
+				<div style="text-align:center">
+				  <span class="dot" onclick="currentSlide(1)"></span> 
+				  <span class="dot" onclick="currentSlide(2)"></span> 
+				  <span class="dot" onclick="currentSlide(3)"></span> 
+				</div>
+           
+           
+           <script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+           
+           
+            </div>
+            
+            
+            
+</div>
+        
+<section id="news">
+        	<div id="news_item">
+            	<img src="imagens/news_01.png" alt="News 01"/>
+                <h2 class="news_titulo">News 01</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu erat lacus, vel congue mauris.</p>
+				<a href="#" class="leia">Leia +</a>
+            </div>
+            <div id="news_item">
+            	<img src="imagens/news_02.png" alt="News 02"/>
+                <h2 class="news_titulo">News 02</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu erat lacus, vel congue mauris.</p>
+				<a href="#" class="leia">Leia +</a>
+            </div>
+            <div id="news_item">
+            	<img src="imagens/news_03.png" alt="News 03"/>
+                <h2 class="news_titulo">News 03</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu erat lacus, vel congue mauris.</p>
+				<a href="#" class="leia">Leia +</a>
+            </div>
+            <div id="news_item">
+            	<img src="imagens/news_04.png" alt="News 04"/>
+                <h2 class="news_titulo">News 04</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu erat lacus, vel congue mauris.</p>
+				<a href="#" class="leia">Leia +</a>
+            </div>
+            <div id="news_item">
+            	<img src="imagens/news_05.png" alt="News 05"/>
+                <h2 class="news_titulo">News 05</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu erat lacus, vel congue mauris.</p>
+				<a href="#" class="leia">Leia +</a>
+            </div>
+            <div id="news_item">
+            	<img src="imagens/news_06.png" alt="News 06"/>
+                <h2 class="news_titulo">News 06</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu erat lacus, vel congue mauris.</p>
+				<a href="#" class="leia">Leia +</a>
+            </div>
+</section>
+        
+        <div class="botton">
+        	<a href="#home" class="scroll">topo</a>
+        </div>
+       
+        
+        <footer>
+        	<div id="rodape">
+        	<h3><a href="#">Viva o épico</a></h3>
+        		<nav>
+        			<h4>Realização</h4>
+        			<ul>
+        				<li><a href="#" class="omelete">Omelete</a></li>
+        				<li><a href="#" class="pizitoys">PiziToys</a></li>
+        				<li><a href="#" class="chiaroscuro">Chiaroscuro</a></li>
+        			</ul>
+        		</nav>
+        	
+        	<h4>©2016 CCXP®. CCXP SP®. COMIC CON EXPERIENCE®. COMIC CON EXPERIENCE SÃO PAULO®. CCXP UNLOCK®. #VAISEREPICO e MINICON <br>
+são marcas registradas COMIC CON EVENTOS LTDA. CNPJ.: 19.641.956/0001-09. <br>
+Qualquer uso sem autorização dos nomes ou suas variações é uma violação da lei internacional de registro de marcas.</h4>
+			</div>
+        </footer>
+    </main>
+</body>
+</html>
