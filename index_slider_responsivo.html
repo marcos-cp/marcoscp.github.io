@@ -1,0 +1,351 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ponto e Vírgula ;</title>
+
+  <link rel="shortcut icon" href="imagens/topo.png" type="image/x-icon">
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+
+  <script type="text/javascript">
+    jQuery(document).ready(function ($) {
+      $(".scroll").click(function (event) {
+        event.preventDefault();
+        $('html,body').animate({
+          scrollTop: $(this.hash).offset().top
+        }, 800);
+      });
+    });
+  </script>
+
+  <style>
+    body {
+      font-family: Verdana, sans-serif;
+      margin: 0
+    }
+
+    .mySlides {
+      display: none
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Caption text */
+    .text {
+      color: #FF225A;
+      font-size: 15px;
+      padding: 8px 12px;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 24px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 160px;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 13px;
+      width: 13px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+
+      .prev,
+      .next,
+      .text {
+        font-size: 11px
+      }
+    }
+  </style>
+
+  <link href="css/estilo_responsivo.css" rel="stylesheet" type="text/css" media="screen">
+
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1><a href="#">Ponto e Vírgula;</a></h1>
+      <nav id="redes">
+        <ul>
+          <li><a href="#" class="twitter">Twitter</a></li>
+          <li><a href="#" class="youtube">YouTube</a></li>
+          <li><a href="#" class="instagram">Instagram</a></li>
+          <li><a href="#" class="facebook">Facebook</a></li>
+        </ul>
+      </nav>
+
+      <div id="menu_bg">
+        <nav class="topnav" id="menu_principal">
+          <ul>
+            <li><a href="#news" class="scroll">NOTÍCIAS</a></li>
+            <li><a href="#tecnologia" class="scroll">TECNOLOGIA</a></li>
+            <li><a href="#categorias" class="scroll">CATEGORIAS</a></li>
+            <li><a href="#assine" class="scroll">ASSINE</a></li>
+          </ul>
+        </nav>
+        <a href="javascript:void(0);" style="font-size: 15px;" class="icon" onClick="myFunction()">&#9776;</a>
+      </div>
+
+      <script>
+        function myFunction() {
+          var x = document.getElementById("menu_principal");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+      </script>
+
+    </header>
+
+    <section id="home"></section>
+
+    <div id="slider">
+      <div id="banner">
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="imagens/img1.png" style="width:100%">
+            <div class="text">Nova tecnologia Front-end!</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="imagens/img2.png" style="width:100%">
+            <div class="text">Minecraft 4K!</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="imagens/img3.png" style="width:100%">
+            <div class="text">Novo mapa de Super Mario World!</div>
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <script>
+          var slideIndex = 1;
+          showSlides(slideIndex);
+
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+
+          function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+              slideIndex = 1
+            }
+            if (n < 1) {
+              slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+          }
+        </script>
+      </div>
+    </div>
+
+    <section id="conteudo">
+      <div class="chamada">
+        <a href="#" style="text-decoration: none;"><img class="img_chamada" src="imagens/news_01.png" alt="Notícia1">
+          <p class="titulo_chamada">Netflix aumenta preços</p>
+          <p class="tempo"><a href="#" class="topico">TECNOLOGIA</a> | 21:00 • 08 DEZEMBRO 2021</p>
+        </a>
+        <p class="por">Por: <a href="#" class="user">Marcos Pacheco</a></p>
+        <p class="texto_chamada">O plano padrão, que disponibiliza 2 telas <span>e resolução Full HD (1080p), aumentou
+            de R$</span>
+          <span> 32,90 para R$ 39,90 por mês. Já o plano</span> <span>premium, com 4 telas e resolução 4K
+            (2160p)</span>, <span> subiu de R$ 45,90 para R$
+            55,90 por mês.</span> <span>Segundo a...</span><a href="#" class="leia"> Leia+</a></p>
+      </div>
+
+      <div class="chamada">
+        <a href="#" style="text-decoration: none;"><img class="img_chamada" src="imagens/news_02.png" alt="Notícia2">
+          <p class="titulo_chamada">Sim, isso é Minecraft!</p>
+          <p class="tempo"><a href="#" class="topico">JOGOS</a> | 17:00 • 07 DEZEMBRO 2021</p>
+        </a>
+        <p class="por">Por: <a href="#" class="user">Iago Roque</a></p>
+        <p class="texto_chamada"><span>Um novo mapa de Minecraft foi divulgado</span> <span>recentemente, onde seus
+            criadores
+            tentaram </span> <span>recriar uma imagem estratosférica do planeta, </span><span>tendo que realizar toda a
+            construção em uma</span>
+          <span>enorme escala, para conseguir...</span><a href="#" class="leia"> Leia+</a></p>
+        </p>
+      </div>
+
+      <div class="chamada">
+        <a href="#" style="text-decoration: none;"><img class="img_chamada" src="imagens/news_03.gif" alt="Notícia3">
+          <p class="titulo_chamada">Gravidade e Teoria das Cordas</p>
+          <p class="tempo"><a href="#" class="topico">TECNOLOGIA</a> | 19:00 • 06 DEZEMBRO 2021</p>
+        </a>
+        <p class="por">Por: <a href="#" class="user">Iago Roque</a></p>
+        <p class="texto_chamada"><span>Recentemente, alguns físicos estão sugerindo </span><span>uma nova teoria na
+            física, onde a
+            gravidade seria</span><span> uma partícula fundamental, assim como o Bóson</span><span> de Higgs e os
+            quarks. Essa teoria está sendo
+            discutida...</span><a href="#" class="leia"> Leia+</a></p>
+      </div>
+
+      <div class="chamada">
+        <a href="#" style="text-decoration: none;"><img class="img_chamada" src="imagens/news_04.png" alt="Notícia4">
+          <p class="titulo_chamada">Não seja um babaca!</p>
+          <p class="tempo"><a href="#" class="topico">NOTÍCIAS</a> | 14:00 • 06 DEZEMBRO 2021</p>
+        </a>
+        <p class="por">Por: <a href="#" class="user">Lucas Farias</a></p>
+        <p class="texto_chamada"><span>De maneira educativa e bem-humorada, a prefeitura</span> <span>de Salvador lançou
+            um "guia para não
+            ser um turista </span> <span>babaca", nas redes sociais. Com "tutorial" nas redes</span> <span>sociais
+            mostra dicas para
+            convívio em...</span><a href="#" class="leia"> Leia+</a></p>
+      </div>
+
+      <div class="chamada">
+        <a href="#" style="text-decoration: none;"><img class="img_chamada" src="imagens/news_05.png" alt="Notícia5">
+          <p class="titulo_chamada">Novo trailer do Homem-Aranha!</p>
+          <p class="tempo"><a href="#" class="topico">NOTÍCIAS</a> | 19:00 • 05 DEZEMBRO 2021</p>
+        </a>
+        <p class="por">Por: <a href="#" class="user">Matheus Henrique</a></p>
+        <p class="texto_chamada"><span>A Marvel e a Sony estrearam a nova prévia em um</span> <span>evento especial
+            presencial no Regal
+            Sherman Oaks</span>,<span>em Los Angeles, com convites distribuídos apenas</span> <span>para alguns fãs e
+            repórteres. O lançamento</span>do trailer foi...</span><a href="#" class="leia"> Leia+</a></p>
+      </div>
+
+      <div class="chamada">
+        <a href="#" style="text-decoration: none;"><img class="img_chamada" src="imagens/news_06.png" alt="Notícia6">
+          <p class="titulo_chamada">Conectando a Amazônia</p>
+          <p class="tempo"><a href="#" class="topico">TECNOLOGIA</a> | 13:00 • 05 DEZEMBRO 2021</p>
+        </a>
+        <p class="por">Por: <a href="#" class="user">Lucas Farias</a></p>
+        <p class="texto_chamada"><span>Entre tantas empreitadas, Elon Musk está agora</span><span> se aproximando do
+            Brasil. Na
+            segunda-feira (15), </span><span>o homem mais
+            rico do mundo se reuniu com o</span><span> ministro das Comunicações, Fábio Faria, para
+          </span><span>discutir sobre...</span><a href="#" class="leia">  Leia+</a></p>
+      </div>
+    </section>
+
+    <div class="botton">
+      <a href="#home" class="scroll">topo</a>
+    </div>
+
+    <footer>
+      <div id="rodape">
+        <h3>© Copyright 2021 Ponto e Vírgula LTDA</h3>
+      </div>
+    </footer>
+  </main>
+</body>
+
+<!-- Criado por Iago Roque, Lucas Farias, Marcos Pacheco, Matheus Henrique -->
+
+</html>
